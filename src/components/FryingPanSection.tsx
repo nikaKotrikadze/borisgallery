@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import "./fryingpan.css";
 import borplate1 from "../../public/borplate1.png";
 import borplate2 from "../../public/borplate2.png";
 import borplate3 from "../../public/borplate3.png";
@@ -16,25 +17,36 @@ const FryingPanSection = () => {
     { id: 4, src: borplate4, deg: 0 },
   ];
   return (
-    <main>
+    <main
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        gap: 15,
+      }}
+    >
+      <h1 style={{ textAlign: "center" }}>Frying Pan Artwork</h1>
       <div
         style={{
           // background: "blue",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-evenly",
-          width: "100%",
+          width: "98%",
+          flexWrap: "wrap",
         }}
       >
         {borPlates.map((image: any) => {
           return (
             <Link
               href={`/gallery/${image.id}`}
-              style={
-                {
-                  // boxShadow: "2px 2px 2px 1px gray",
-                }
-              }
+              className="fryingpan-shadow-hover"
+              style={{
+                boxShadow: "0px 0px 5px 0px black",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
               <Image
                 alt="img"

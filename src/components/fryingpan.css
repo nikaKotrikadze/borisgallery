@@ -1,0 +1,7 @@
+.fryingpan-shadow-hover {
+  transition: 0.5s;
+}
+
+.fryingpan-shadow-hover:hover {
+  background-color: #000000;
+}
